@@ -111,7 +111,7 @@ export default function Pricing() {
               />
             </Link>
           </div>
-          <Link href="/thank-you">
+          <Link href="/pricing">
             <button 
               className="bg-purple-600 text-white px-6 py-2 rounded-full font-medium hover:bg-purple-700 transition-colors"
               onClick={() => trackButtonClick('sign_up_header', 'pricing_page')}
@@ -205,16 +205,13 @@ export default function Pricing() {
                 </div>
 
                 <Link href="/thank-you">
-                  <button
-                    className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-colors mb-6 cursor-pointer ${
-                      plan.highlighted
-                        ? 'bg-purple-700 hover:bg-purple-800'
-                        : 'bg-purple-600 hover:bg-purple-700'
-                    }`}
-                    data-plan={plan.name === 'Starter' ? 'basic' : plan.name === 'Creator' ? 'star' : 'agency'}
+                  <button 
+                    className="btn btn-cta w-full py-3 px-6 rounded-lg font-medium text-white transition-colors mb-6 cursor-pointer bg-purple-600 hover:bg-purple-700"
+                    data-plan={plan.name.toLowerCase()}
+                    type="button"
                     onClick={() => trackButtonClick(`plan_${plan.name.toLowerCase()}_trial`, 'pricing_cards')}
                   >
-                    {plan.buttonText}
+                    FREE TRIAL
                   </button>
                 </Link>
 

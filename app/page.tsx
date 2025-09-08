@@ -20,7 +20,7 @@ export default function Home() {
             unoptimized
           />
         </div>
-        <Link href="/thank-you">
+        <Link href="/pricing">
           <button 
             className="bg-purple-600 text-white px-6 py-2 rounded-full font-medium hover:bg-purple-700 transition-colors"
             onClick={() => trackButtonClick('sign_up_header', 'header')}
