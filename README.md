@@ -2,6 +2,8 @@
 
 A modern Next.js landing page template optimized for conversions.
 
+![Screenshot](./public/Screenshot%202025-12-07%20075142.png)
+
 **Live Demo:** [https://www.linkhouse.store/](https://www.linkhouse.store/)
 
 ## Tech Stack
