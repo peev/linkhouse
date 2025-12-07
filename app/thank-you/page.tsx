@@ -17,10 +17,15 @@ export default function ThankYou() {
     setIsSubmitting(true);
 
     try {
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+      if (!accessKey) {
+        throw new Error("Web3Forms access key not configured");
+      }
+
       const formData = new FormData();
-      formData.append("access_key", "383f861f-5554-44a7-a802-31230646a6d2");
+      formData.append("access_key", accessKey);
       formData.append("email", email);
-      formData.append("subject", "New email signup from LinkHaus");
+      formData.append("subject", "New email signup");
       formData.append("message", `New email signup: ${email}`);
 
       const response = await fetch("https://api.web3forms.com/submit", {
